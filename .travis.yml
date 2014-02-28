@@ -2,8 +2,8 @@ language: python
 cache:
     apt: true
     directories:
-        - /home/travis/virtualenv/Python2.7
-        - /home/travis/virtualenv/Python3.3
+        - /home/travis/virtualenv/python2.7
+        - /home/travis/virtualenv/python3.3
 python:
     - 2.7
     - 3.3
