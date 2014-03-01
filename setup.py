@@ -5,12 +5,12 @@ __docformat__ = "restructuredtext en"
 from setuptools import setup, find_packages
 
 
-install_requires = [
-    'ipython',
-    'numpy',
-    'six',
-    'mpi4py'
-]
+#install_requires = [
+#    'ipython',
+#    'numpy',
+#    'six',
+#    'mpi4py'
+#]
 
 metadata = {
     'name': 'distarray',
