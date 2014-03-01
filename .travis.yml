@@ -1,9 +1,6 @@
 language: python
-cache:
-    apt: true
-    directories:
-        - /home/travis/virtualenv/python2.7
-        - /home/travis/virtualenv/python3.3
+virtualenv:
+    system_site_packages: true
 python:
     - 2.7
     - 3.3
