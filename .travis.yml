@@ -1,6 +1,4 @@
 language: python
-virtualenv:
-    system_site_packages: true
 python:
     - 2.7
     - 3.3
@@ -8,17 +6,14 @@ before_install:
     - sudo apt-get update
     - sudo apt-get install libopenmpi-dev
     - sudo apt-get install openmpi-bin
-     #- pip install numpy
-    - sudo apt-get install python3-numpy
-     #- pip install pyzmq --install-option="--zmq=bundled"
-    - sudo apt-get install python-zmq python3-zmq
-     #- pip install ipython
-    - sudo apt-get install python-zmq python3-zmq
-     #- pip install mpi4py --allow-all-external --allow-unverified mpi4py
-    - sudo apt-get install python-mpi4py python3-mpi4py
+      #- pip install numpy
+    - "if [[ $TRAVIS_PYTHON_VERSION == '3.3' ]]; then sudo apt-get install python3-numpy python3-numpy-dev; fi"
+    - "if [[ $TRAVIS_PYTHON_VERSION == '3.3' ]]; then ln -s /usr/lib/python3/dist-packages/numpy ~/virtualenv/python3.3/lib/python3.3/site-packages/; fi"
+    - pip install pyzmq --install-option="--zmq=bundled"
+    - pip install ipython
+    - pip install mpi4py --allow-all-external --allow-unverified mpi4py
     - pip install six
-     #- pip install sphinx
-    - sudo apt-get install python-sphinx python3-sphinx
+    - pip install sphinx
     - pip install sphinxcontrib-napoleon
     - pip install coverage
     - pip install coveralls
