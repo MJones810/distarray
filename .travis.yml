@@ -10,11 +10,15 @@ before_install:
     - sudo apt-get install openmpi-bin
      #- pip install numpy
     - sudo apt-get install python3-numpy
-    - pip install pyzmq --install-option="--zmq=bundled"
-    - pip install ipython
-    - pip install mpi4py --allow-all-external --allow-unverified mpi4py
+     #- pip install pyzmq --install-option="--zmq=bundled"
+    - sudo apt-get install python-zmq python3-zmq
+     #- pip install ipython
+    - sudo apt-get install python-zmq python3-zmq
+     #- pip install mpi4py --allow-all-external --allow-unverified mpi4py
+    - sudo apt-get install python-mpi4py python3-mpi4py
     - pip install six
-    - pip install sphinx
+     #- pip install sphinx
+    - sudo apt-get install python-sphinx python3-sphinx
     - pip install sphinxcontrib-napoleon
     - pip install coverage
     - pip install coveralls
