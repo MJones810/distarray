@@ -22,7 +22,7 @@ metadata = {
     'author_email': 'ellisonbg@gmail.com',
     'url': 'https://github.com/enthought/distarray',
     'packages': find_packages(),
-    'install_requires': install_requires
+    #'install_requires': install_requires
 }
 
 setup(**metadata)
